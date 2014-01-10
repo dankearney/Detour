@@ -1,0 +1,21 @@
+{
+  "name": "Detour",
+  "short_name" : "Detour",
+  "version": "0.0.1",
+  "icons" : {},
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["jquery.min.js","detour.js"]
+    }
+  ],
+  "background": { "scripts": ["background.js", "jquery.min.js"] },
+  "permissions": [
+    "tabs", "http://*/*"
+  ],
+  "browser_action": {
+      "name": "Detour",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
