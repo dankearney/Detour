@@ -1,18 +1,28 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Detour</title>
-    <style>
-    	body {
-        width: 200px;
-        height: 100px;
-        font-family: arial;
-    	}
-    </style>
-    <script type="text/javascript" src="popup.js" />
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="popup.css" type="text/css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
   </head>
   <body>
-    <h3>Detour</h3>
-  	<div>
-  	</div>
+    <div>
+      <h3>Detour</h3>
+    	<div>
+        <div class="newDetour">
+          <span class="text">When I go to<span>
+          <input type='text' class="siteInput "id='newBlackListedSite'></input>
+          <span class="text">take me to</span>
+          <input type='text' class="siteInput" id='newDetourSite'></input>
+          <button id="addDetour">+</button> 
+        </div>
+        <hr>
+        <div class="detourItems">
+          <span class="detourItem"></span>
+        </div>
+    	</div>
+    </div>
   </body>
 </html>

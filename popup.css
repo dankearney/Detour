@@ -1,0 +1,17 @@
+body {
+   width: 430px;
+   font-family: arial;
+   padding: 5px;
+}
+
+.siteInput {
+	width: 100px;
+}
+
+.blacklistedSite {
+	padding-left: 5px;
+}
+
+.detourItem {
+	padding-bottom: 5px;
+}

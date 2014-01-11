@@ -5,7 +5,7 @@
   "icons" : {},
   "content_scripts": [
     {
-      "matches": ["http://*/*"],
+      "matches": ["*://*/*"],
       "js": ["jquery.min.js","detour.js"]
     }
   ],
