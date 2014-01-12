@@ -3,22 +3,47 @@ $(document).ready(function() {
 	populateList();
 
 	$("#addDetour").click(function() {
-		chrome.extension.getBackgroundPage().addToStorage(
-			$("#newBlackListedSite").val(),
-			$("#newDetourSite").val()
-		);
-		populateList();
+
+		var site = $("#newBlackListedSite").val();
+		var detour = 'http://' + $("#newDetourSite").val();
+			
+		if (contains(detour, site)) {
+			showErr();
+		} else {
+			hideErr();
+				chrome.extension.getBackgroundPage().addToStorage(
+					site,
+					detour
+				);
+			populateList();
+		}
 	});
 
 })
 
+function circular(site, detour) {
+	return (contains(detour, site));
+}
+
+function showErr() {
+	$("#err").show(200);
+}
+
+function hideErr() {
+	$("#err").hide(200);
+}
+
+function contains(string, substring) {
+  return string.indexOf(substring) != -1;
+}
+
 function addDetourItem(blackListItem, index) {
 	$(".detourItems").append(
-		"<div class='detourItem'><button id='" + 
+		"<div class='detourItem'><button  class='btn btn-xs btn-danger' id='" + 
 		index + 
-		"'>-</button><span class='blacklistedSite'>" +
+		"'>remove</button><span class='blacklistedSite'>" +
 		blackListItem.site +
-		"</span><span class='detour'> => " +
+		"</span><span class='right-arrow'/><span class='detour'> " +
 		blackListItem.detour +
 		"</span></div>"
 	);

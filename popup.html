@@ -6,18 +6,21 @@
     <link rel="stylesheet" href="popup.css" type="text/css" />
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="popup.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">  
   </head>
   <body>
     <div>
-      <h3>Detour</h3>
+      <h1>Detour</h1>
     	<div>
         <div class="newDetour">
-          <span class="text">When I go to<span>
-          <input type='text' class="siteInput "id='newBlackListedSite'></input>
-          <span class="text">take me to</span>
-          <input type='text' class="siteInput" id='newDetourSite'></input>
-          <button id="addDetour">+</button> 
+          <span class="text">When I go to</span>
+          <input type='text' class="siteInput form-control" id='newBlackListedSite' placeholder="facebook.com"></input>
+          <span class="text">take me to <em class="http">http://</em></span>
+          <input type='text' class="siteInput form-control" id='newDetourSite' placeholder='cnn.com'></input>
+          <button id="addDetour" class="btn btn-primary btn-xs addButton">add</button> 
         </div>
+        <div id="err">Detour redirects to itself!</div>
         <hr>
         <div class="detourItems">
           <span class="detourItem"></span>
