@@ -36,7 +36,8 @@ function detour(url) {
 }
 
 function getBlackList() {
-  return JSON.parse(localStorage['blacklisted'])
+  var bl = localStorage['blacklisted'];
+  return bl ? JSON.parse(bl) : []
 }
 
 function addToStorage(site, detour) {

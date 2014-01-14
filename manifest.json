@@ -1,8 +1,9 @@
 {
   "name": "Detour",
   "short_name" : "Detour",
-  "version": "0.0.1",
-  "icons" : {"128" : "128.png"},
+  "description" : "Use Detour to improve your browsing habits.",
+  "version": "0.0.2",
+  "icons" : {"128" : "128.png", "64" : "64.png", "32" : "32.png"},
   "background": { "scripts": ["background.js", "jquery.min.js"] },
   "permissions": [
     "tabs", "http://*/*"
